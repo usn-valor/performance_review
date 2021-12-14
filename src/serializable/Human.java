@@ -13,12 +13,14 @@ public class Human implements Serializable {
 
     public String name;
     public List<String> assets = new ArrayList<>();
+    public int age;
 
     public Human() {
     }
 
-    public Human(String name, String... assets) {
+    public Human(String name, int age, String... assets) {
         this.name = name;
+        this.age = age;
         if (assets != null) {
             this.assets.addAll(Arrays.asList(assets));
         }
