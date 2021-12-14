@@ -6,12 +6,7 @@ public class PingPong {
 
         Printer printer = new Printer();
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                printer.printOne();
-            }
-        }).start();
+        new Thread(() -> printer.printOne()).start();
 
         new Thread(printer::printTwo).start();
     }
